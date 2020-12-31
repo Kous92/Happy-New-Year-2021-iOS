@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HappyNewYear2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CustomView" customModule="HappyNewYear2021" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDT-hg-vD0" customClass="CustomButton" customModule="HappyNewYear2021" customModuleProvider="target">
+                                <rect key="frame" x="50" y="715" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ave-jf-Tm6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Countdown">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.0" green="0.77647058820000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="countdownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEW-Qi-Czh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiu-0M-oXl">
+                                <rect key="frame" x="147.33333333333334" y="368.33333333333331" width="95.666666666666657" height="107.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BDT-hg-vD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Q3e-zy-5SD"/>
+                            <constraint firstItem="kiu-0M-oXl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R0s-Ck-4ra"/>
+                            <constraint firstItem="kiu-0M-oXl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yrb-tK-6id"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BDT-hg-vD0" secondAttribute="trailing" constant="50" id="bBg-6v-nfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BDT-hg-vD0" secondAttribute="bottom" constant="35" id="jaN-qc-KWV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="timer" destination="kiu-0M-oXl" id="KPi-Ga-HQf"/>
+                        <outlet property="timerButton" destination="BDT-hg-vD0" id="p8k-SK-HGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206.15384615384616" y="105.21327014218009"/>
+        </scene>
+        <!--Happy New Year View Controller-->
+        <scene sceneID="Spb-Hv-H9x">
+            <objects>
+                <viewController storyboardIdentifier="happy_new_year_vc" id="QvN-fk-2cZ" customClass="HappyNewYearViewController" customModule="HappyNewYear2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BnB-bh-xrr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy New Year" translatesAutoresizingMaskIntoConstraints="NO" id="Kyx-Se-bF7">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGy-gz-dJa">
+                                <rect key="frame" x="20" y="45.000000000000007" width="50" height="48.666666666666664"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A13-U3-IJ2"/>
+                                    <constraint firstAttribute="width" constant="50" id="p0H-kK-aPB"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="xmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="closeView:" destination="QvN-fk-2cZ" eventType="touchUpInside" id="tVm-7E-72A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy New Year 2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1C-Cf-lOE">
+                                <rect key="frame" x="20" y="681" width="350" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="CVI-YF-S5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LBl-8c-lfd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L1C-Cf-lOE" firstAttribute="leading" secondItem="LBl-8c-lfd" secondAttribute="leading" constant="20" id="2LI-bs-XWn"/>
+                            <constraint firstItem="Kyx-Se-bF7" firstAttribute="trailing" secondItem="LBl-8c-lfd" secondAttribute="trailing" id="3ch-Sz-82l"/>
+                            <constraint firstItem="bGy-gz-dJa" firstAttribute="top" secondItem="LBl-8c-lfd" secondAttribute="top" id="Mh7-VS-4Nj"/>
+                            <constraint firstItem="LBl-8c-lfd" firstAttribute="trailing" secondItem="L1C-Cf-lOE" secondAttribute="trailing" constant="20" id="SkI-iN-HgB"/>
+                            <constraint firstItem="Kyx-Se-bF7" firstAttribute="leading" secondItem="LBl-8c-lfd" secondAttribute="leading" id="Zfj-Y1-XLp"/>
+                            <constraint firstItem="bGy-gz-dJa" firstAttribute="leading" secondItem="LBl-8c-lfd" secondAttribute="leading" constant="20" id="Zs7-o2-jUV"/>
+                            <constraint firstItem="Kyx-Se-bF7" firstAttribute="top" secondItem="BnB-bh-xrr" secondAttribute="top" id="izB-X5-p4t"/>
+                            <constraint firstAttribute="bottom" secondItem="Kyx-Se-bF7" secondAttribute="bottom" id="sCZ-Rm-4hI"/>
+                            <constraint firstItem="LBl-8c-lfd" firstAttribute="bottom" secondItem="L1C-Cf-lOE" secondAttribute="bottom" constant="19" id="xld-sI-j3s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="happyNewYear" destination="L1C-Cf-lOE" id="3Y6-Z8-kd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUf-5O-iBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724.61538461538464" y="110.90047393364928"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="BDT-hg-vD0">
+            <size key="intrinsicContentSize" width="120" height="41"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Happy New Year" width="360" height="640"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
